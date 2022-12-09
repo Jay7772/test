@@ -1,0 +1,92 @@
+body {
+
+    margin: 0px;
+}
+
+
+
+
+
+.bigbox {
+    background-color: aqua;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    flex-wrap: wrap;
+    align-self:center;
+    justify-content: space-evenly;
+
+
+}
+
+
+.boxes {
+    flex-basis: 20%;
+    height: 20vh;
+    margin-top: 2.55%;
+    margin-bottom:2.5%;
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+.boxes{
+
+    flex-basis: 40%;
+ 
+
+}
+
+         
+
+}
+
+@media screen and (max-width: 600px) {
+.boxes{
+
+    flex-basis: 80%;
+ 
+
+
+
+
+    }
+
+
+
+}
+
+
+
+
+.a {
+
+    background-color: rgb(238, 255, 0);
+
+}
+
+.b {
+
+    background-color: rgb(60, 177, 37);
+
+}
+
+.c {
+
+    background-color: rgb(255, 0, 0);
+
+}
+
+
+.d {
+
+    background-color: rgb(250, 182, 36);
+
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" charset="UTF-8" width="device-width, initial-scale=1">
+    <title></title>
+
+
+
+
+
+
+
+    <style>
+        body {
+            margin: 0px;
+
+
+
+
+
+
+        }
+
+
+
+        .flexdiv {
+
+            display: flex;
+            height: auto !important;
+            margin-top: 5vh;
+            background-color: aqua;
+
+            justify-content: center;
+
+        }
+
+
+        .video {
+
+            width: 50%;
+            height: auto !important;
+            margin: 0px;
+            padding: 0px;
+
+
+        }
+
+
+        .audio {
+
+            width: 50%;
+
+        }
+    </style>
+
+
+
+  <!-- Shim for Media - include to support for older browsers -->
+  <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+
+
+
+
+</head>
+
+
+<body>
+
+
+
+    <header>
+
+
+    </header>
+
+    <!-- Can add loop/autoplay-->
+    <!-- Don't use wav files, generally prefer mp3 for audio due to wide browser support and mp4 (h.264) for video-->
+    <!-- Can embed <source> tags in video do create backup formats-->
+    <!-- Can gemerate captions and include in <track> tags (placed with video) - uses vtt files created using some software-->
+
+
+    <div class="flexdiv">
+        <video class="video" id="video1" src="Video/video.mp4" controls>Your browser doesn't support video</video>
+
+
+    </div>
+
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="stop">Stop</button>
+
+
+    <div class="flexdiv">
+        <audio class="audio" src="audio/song.mp3" controls>Your browser doesn't support audio</audio>
+
+    </div>
+
+
+    <div class="flexdiv">
+        <iframe class="video" src="https://www.youtube.com/embed/Jsj-hDW9bS8" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+
+    </div>
+
+
+
+
+
+
+ 
+
+</body>
+
+<script defer>
+
+    let playButton = document.getElementById("play");
+    let pauseButton = document.getElementById("pause");
+    let stopButton = document.getElementById("stop");
+    let video1 = document.getElementById("video1");
+
+    playButton.addEventListener("click", function(){
+        
+        video1.play();
+        
+    });
+
+
+    pauseButton.addEventListener("click", function(){
+        
+        video1.pause();
+        
+    });
+
+    stopButton.addEventListener("click", function(){
+        
+        video1.pause();
+        video1.currentTime = 0;
+        
+    });
+
+
+    video1.addEventListener("ended", function(){
+        
+        video1.currentTime = 0;
+        
+    });
+
+</script>
+
+
+</html>
